@@ -20,10 +20,15 @@ def write():
         json.dump(term_data, data)
 
 
-inquiry = input("Enter [1] For Search [2] For Add Term\n-> ")
-if inquiry == "1":
-    search()
-elif inquiry == "2":
-    write()
-else:
-    print("Please write either '1' or '2'")
+while True:
+    inquiry = input("Enter [1] For Search [2] For Add Term [3] For Exit\n-> ")
+
+    if inquiry == "1":
+        search()
+    elif inquiry == "2":
+        write()
+    elif inquiry == "3":
+        print("Have a Nice Day!")
+        break
+    else:
+        print("Please write either '1' or '2'")
